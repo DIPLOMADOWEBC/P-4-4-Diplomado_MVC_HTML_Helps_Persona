@@ -1,0 +1,41 @@
+﻿@model P_4_4_Diplomado_MVC_HTML_Helps_Persona.Models.Persona
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar Persona</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ModificacionProducto", "Home", FormMethod.Post))
+        {
+            <p>
+                Codigo de Producto:
+                @Html.DisplayFor(model => model.Codigo)
+            </p>
+            <p>
+                Nombre:
+                @Html.EditorFor(model => model.Nombre)
+            </p>
+            <p>
+                Peso:
+                @Html.EditorFor(model => model.Peso)
+            </p>
+            <p>
+                Trabaja?:
+                @Html.EditorFor(model => model.Trabaja)
+            </p>
+            <p>
+                Fecha de nacimiento:
+                @Html.EditorFor(model => model.FechaNacimiento)
+            </p>
+            <p>
+                <input type="submit" value="Confirmar" />
+            </p>
+        }
+    </div>
+</body>
+</html>
